@@ -1,6 +1,7 @@
 ﻿using excercie_1.agent;
 using excercie_1.service;
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 
@@ -19,6 +20,7 @@ namespace excercie_1
                 if (choix == "1")
                 {
                     Voiture v = _DemandeVoiture.CreerVoiture();
+                    voitures.Add(v);
                 }
                 else if (choix == "2")
                 {
