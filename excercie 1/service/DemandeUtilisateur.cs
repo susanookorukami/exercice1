@@ -57,14 +57,18 @@ namespace excercie_1.service
             Console.WriteLine(message);
             string vf = Console.ReadLine();
             bool permit = false;
-            
-                if(permit == true)
-                {
-                Console.WriteLine("vous avez le permit");
-                }
-            else
+            while(permit  == false)
             {
-                Console.WriteLine("vous avez pas le permit");
+                string valeur= vf;
+                if (valeur == "oui")
+                {
+                    Console.WriteLine("vous qvez le permit");
+                    return valeur;
+                }
+                else
+                {
+                    Console.WriteLine("vous avez pas le permit");
+                }
             }
             
             
