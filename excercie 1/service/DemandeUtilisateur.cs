@@ -57,18 +57,36 @@ namespace excercie_1.service
             Console.WriteLine(message);
             string vf = Console.ReadLine();
             bool permit = false;
-            while(permit  == false)
+            int valeurconvertie;
+            while (permit  == false)
             {
                 string valeur= vf;
-                if (valeur == "oui")
+                if (vf == "Oui")
                 {
-                    Console.WriteLine("vous qvez le permit");
-                    return valeur;
+                    
+                    return vf;
                 }
-                else
+                else if (string.IsNullOrEmpty(vf))
                 {
-                    Console.WriteLine("vous avez pas le permit");
+                    Console.WriteLine("Saisie incorrecte: veuillez saisir quelque chose");
+                    vf = Console.ReadLine();
                 }
+                else if (int.TryParse(vf, out valeurconvertie))
+                {
+                    Console.WriteLine("Saisie incorrecte: le nom ne peut pas être un nombre");
+                    vf = Console.ReadLine();
+                }
+                else if (vf[0] < 65 || vf[0] > 90)
+                {
+                    Console.WriteLine("Saisie incorrecte: veuillez commencer le nom par une majuscule");
+                    vf = Console.ReadLine();
+                }
+                else 
+                {
+                    Console.WriteLine("permis obligatoire");
+                    break;
+                }
+               
             }
             
             

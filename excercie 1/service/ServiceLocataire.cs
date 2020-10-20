@@ -24,7 +24,7 @@ namespace excercie_1.service
             l.Nom = _DemandeUtilisateur.DemandeLettre("quel est votre Nom?");
             l.Prenom = _DemandeUtilisateur.DemandeLettre("quel est votre prenom?");
             l.age = _DemandeUtilisateur.DemandeEntier("quel est votre age?");
-            l.permit =_DemandeUtilisateur.DemandeVF("avez vous le permit");
+            l.permit =_DemandeUtilisateur.DemandeVF("avez vous le permit?");
             return l;
         }
     }
