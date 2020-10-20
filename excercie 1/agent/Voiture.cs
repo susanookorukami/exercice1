@@ -9,5 +9,7 @@ namespace excercie_1.agent
         public string NOmV;
         public int NbPlace;
         public string TypeV;
+
+        
     }
 }

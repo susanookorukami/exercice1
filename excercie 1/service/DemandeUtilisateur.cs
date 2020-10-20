@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 
 namespace excercie_1.service
@@ -49,6 +50,26 @@ namespace excercie_1.service
                 }
             }
             return lettre;
+        }
+
+        public string DemandeVF(string message)
+        {
+            Console.WriteLine(message);
+            string vf = Console.ReadLine();
+            bool permit = false;
+            
+                if(permit == true)
+                {
+                Console.WriteLine("vous avez le permit");
+                }
+            else
+            {
+                Console.WriteLine("vous avez pas le permit");
+            }
+            
+            
+            return vf;
+            
         }
     }
 }

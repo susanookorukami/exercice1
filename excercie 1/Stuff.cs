@@ -11,9 +11,11 @@ namespace excercie_1
     {
         private static DemandeUtilisateur _DemandeUtilisateur = new DemandeUtilisateur();
         private static DemandeVoiture _DemandeVoiture = new DemandeVoiture(_DemandeUtilisateur);
+        private static ServiceLocataire _ServiceLocataire = new ServiceLocataire(_DemandeUtilisateur, _DemandeVoiture);
         static void Main(string[] args)
         {
             List<Voiture> voitures = new List<Voiture>();
+            List<Locataire> locataires = new List<Locataire>();
             while (true)
             {
                 string choix = Menu();
@@ -26,6 +28,15 @@ namespace excercie_1
                 {
                     _DemandeVoiture.AfficheVoiture(voitures);
                 }
+                else if (choix == "3")
+                {
+                    Locataire l = _ServiceLocataire.creeLocataire();
+                    locataires.Add(l);
+                }
+               /* else if (choix == "2")
+                {
+                    _DemandeVoiture.AfficheVoiture(voitures);
+                }*/
                 else
                 {
                     Console.WriteLine("commande non exsitant");
@@ -40,6 +51,7 @@ namespace excercie_1
         {
             Console.WriteLine("1.créé un vehicule");
             Console.WriteLine("2.afficher la liste des véhicule");
+            Console.WriteLine("3.creé un locataire");
             string choix = Console.ReadLine();
             return choix;
         }

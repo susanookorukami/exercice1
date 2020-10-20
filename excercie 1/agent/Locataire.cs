@@ -10,5 +10,7 @@ namespace excercie_1.agent
         public string Prenom;
         public int age;
         public string permit;
+
+        public List<Voiture> voitures { get; set; }
     }
 }
