@@ -23,6 +23,31 @@ namespace excercie_1.service
             v.TypeV = _DemandeUtilisateur.DemandeLettre("entrer le type de vehicule que vous souhaiter");
             return v;
         }
+        public Voiture CreePVoiture()
+        {
+            Voiture v = new Voiture();
+            for(int i =0; i < 5; i++)
+            {
+                string nom = "Tesla";
+                int nombre = 2;
+                string type = "sport";
+                v.NOmV = _DemandeUtilisateur.DemandeLettre("entrer le nom du véhicule souhaiter");
+                v.NOmV = nom;
+                v.NbPlace = _DemandeUtilisateur.DemandeEntier("entrer le nombre de place que vous souhaiter");
+                v.NbPlace = nombre;
+                v.TypeV = _DemandeUtilisateur.DemandeLettre("entrer le type de vehicule que vous souhaiter");
+                v.TypeV = type;
+               
+                /*Console.WriteLine("voiture: Tesla");
+               Console.WriteLine("nombre de place 2");
+               Console.WriteLine("type de voiture: Sport");
+
+               Console.ReadLine();*/
+
+
+            }
+            return v;
+        }
 
         public void  AfficheVoiture(List<Voiture>voitures)
         {

@@ -21,14 +21,20 @@ namespace excercie_1
                 string choix = Menu();
                 if (choix == "1")
                 {
+                    Voiture v = _DemandeVoiture.CreePVoiture();
+                    voitures.Add(v);
+                    // _DemandeVoiture.CreePVoiture(voitures);
+                }
+                else if    (choix == "2")
+                {
                     Voiture v = _DemandeVoiture.CreerVoiture();
                     voitures.Add(v);
                 }
-                else if (choix == "2")
+                else if (choix == "3")
                 {
                     _DemandeVoiture.AfficheVoiture(voitures);
                 }
-                else if (choix == "3")
+                else if (choix == "4")
                 {
                     Locataire l = _ServiceLocataire.creeLocataire();
                     locataires.Add(l);
@@ -49,9 +55,10 @@ namespace excercie_1
 
         public static string Menu()
         {
-            Console.WriteLine("1.créé un vehicule");
-            Console.WriteLine("2.afficher la liste des véhicule");
-            Console.WriteLine("3.creé un locataire");
+            Console.WriteLine("1.affiche vehicule pré renregistrer");
+            Console.WriteLine("2.créé un vehicule");
+            Console.WriteLine("3.afficher la liste des véhicule");
+            Console.WriteLine("4.creé un locataire");
             string choix = Console.ReadLine();
             return choix;
         }
